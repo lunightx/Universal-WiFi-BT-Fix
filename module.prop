@@ -1,0 +1,7 @@
+id=lunight.wifibtfix
+name=Universal WiFi & BT Fix
+version=2.0
+versionCode=5
+author=Lunight
+description=Module maded for easy fix WiFi & Bluetooth work on ALL GSI/CustomROMs/StockROMs using magisk
+minMagisk=1500
