@@ -1,0 +1,100 @@
+#!/sbin/sh
+
+#################
+# Initialization
+#################
+
+umask 022
+
+# echo before loading util_functions
+ui_print() { echo "$1"; }
+
+require_new_magisk() {
+  ui_print "*******************************"
+  ui_print " Please install Magisk v20.4+! "
+  ui_print "*******************************"
+  exit 1
+}
+
+#########################
+# Load util_functions.sh
+#########################
+
+OUTFD=$2
+ZIPFILE=$3
+
+mount /data 2>/dev/null
+
+[ -f /data/adb/magisk/util_functions.sh ] || require_new_magisk
+. /data/adb/magisk/util_functions.sh
+[ $MAGISK_VER_CODE -lt 20400 ] && require_new_magisk
+
+ui_print " " 
+ui_print "————————————————————————————————————————————————————————"
+ui_print "| ---- | > U N I V E R S A L < |----------- |"
+ui_print "| --- | °°°°°° -- °°°°°°° ---- \ --- / ---- |"
+ui_print "| --- | ------------ | -------- \ - / ----- |"
+ui_print "| --- | °°°°-------- | ---------- ⚠ -----------v.2.0 |"
+ui_print "| --- | ------------ | -------- / - \ ----- |"
+ui_print "| --- | --------- °°°°°°° ---- / --- \ ---- |"
+ui_print "| --°-- | > By Lunight & _sally < | --°°--- |"
+ui_print "————————————————————————————————————————————————————————"
+ui_print "| Give your WiFi & Bluetooth back! x/x/x/x/x/x/x "
+ui_print " "
+ui_print "        ⚠ WARNING: R E B O O T AFTER INSTALLING" 
+ui_print " " 
+ui_print "| Proceed to Installing Module... " 
+ui_print " " 
+
+install_module
+exit 0
+#!/sbin/sh
+
+#################
+# Initialization
+#################
+
+umask 022
+
+# echo before loading util_functions
+ui_print() { echo "$1"; }
+
+require_new_magisk() {
+  ui_print "*******************************"
+  ui_print " Please install Magisk v20.4+! "
+  ui_print "*******************************"
+  exit 1
+}
+
+#########################
+# Load util_functions.sh
+#########################
+
+OUTFD=$2
+ZIPFILE=$3
+
+mount /data 2>/dev/null
+
+[ -f /data/adb/magisk/util_functions.sh ] || require_new_magisk
+. /data/adb/magisk/util_functions.sh
+[ $MAGISK_VER_CODE -lt 20400 ] && require_new_magisk
+
+ui_print " " 
+ui_print "————————————————————————————————————————————————————————"
+ui_print "| ---- | > U N I V E R S A L < |----------- |"
+ui_print "| --- | °°°°°° -- °°°°°°° ---- \ --- / ---- |"
+ui_print "| --- | ------------ | -------- \ - / ----- |"
+ui_print "| --- | °°°°-------- | ---------- ⚠ -----------v.2.0 |"
+ui_print "| --- | ------------ | -------- / - \ ----- |"
+ui_print "| --- | --------- °°°°°°° ---- / --- \ ---- |"
+ui_print "| --°-- | > By Lunight & _sally < | --°°--- |"
+ui_print "————————————————————————————————————————————————————————"
+ui_print "| Give your WiFi & Bluetooth back! x/x/x/x/x/x/x "
+ui_print " "
+ui_print "        ⚠ WARNING: R E B O O T AFTER INSTALLING" 
+ui_print " " 
+ui_print "| Proceed to Installing Module... " 
+ui_print " " 
+
+install_module
+exit 0
